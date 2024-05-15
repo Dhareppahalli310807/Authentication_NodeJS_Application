@@ -1,0 +1,18 @@
+{
+  "name": "authentication_nodejs_application",
+  "version": "1.0.0",
+  "description": "Created A Complete Authentication System Which Can Be Used Starater Code For Creating Any New Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https:/www.github.com/Dhareppahalli310807"
+  },
+  "author": "Dhareppa",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
