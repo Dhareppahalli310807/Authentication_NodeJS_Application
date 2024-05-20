@@ -1,0 +1,29 @@
+<!-- Flash message -->
+<% if (messageSuccess && messageSuccess.length>0) { %>
+    <div id="notification">
+      <p><i class="fa-solid fa-circle-check"></i></p>
+      <p><%= messageSuccess %></p>
+    </div>
+    <% } %>
+    <div id="application_display" class="default_container">
+      <h2>Welcome to</h2>
+      <h1>
+        NodeJS Authentication <br />
+        Starter App
+      </h1>
+      <div class="fingerprint_icon">
+        <i class="fa-solid fa-fingerprint"></i>
+      </div>
+      <div id="button_div">
+        <a id="btn_signup" class="btn_index" href="/signup">
+          <i class="fa-solid fa-user-plus"></i>Sign Up
+        </a>
+        <a id="btn_signin" class="btn_index" href="/signin">
+          <i class="fa-solid fa-user-lock"></i>Sign In
+        </a>
+        <a id="btn_google" class="btn_index" href="/auth/google">
+          <i class="fa-brands fa-google"></i> Sign up with Google
+        </a>
+      </div>
+    </div>
+    

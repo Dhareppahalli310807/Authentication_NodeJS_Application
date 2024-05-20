@@ -1,0 +1,44 @@
+<!-- Flash message -->
+<% if (messageError && messageError.length>0) { %>
+    <div id="notification">
+      <p><i class="fa-solid fa-circle-xmark"></i></p>
+      <p><%= messageError %></p>
+    </div>
+    <% } %>
+    <div id="signup_display" class="default_container">
+      <h1>Sign Up</h1>
+      <div class="fingerprint_icon">
+        <i class="fa-solid fa-fingerprint"></i>
+      </div>
+      <form
+        action="/signup"
+        method="POST"
+        id="signup_form"
+        class="form_styles"
+        autocomplete="off"
+      >
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+          autocomplete="new-user-email"
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+          autocomplete="new-password"
+        />
+        <input
+          type="password"
+          name="cnfPassword"
+          placeholder="Confirm Password"
+          required
+          autocomplete="new-password"
+        />
+        <button type="submit"><i class="fa-solid fa-user-plus"></i>Sign Up</button>
+      </form>
+    </div>
+    

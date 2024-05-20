@@ -1,0 +1,32 @@
+<!-- Flash message -->
+<% if (messageError && messageError.length>0) { %>
+    <div id="notification">
+      <p><i class="fa-solid fa-circle-xmark"></i></p>
+      <p><%= messageError %></p>
+    </div>
+    <% } %>
+    <div id="signin_display" class="default_container">
+      <h1>Sign In</h1>
+    
+      <div class="fingerprint_icon">
+        <i class="fa-solid fa-fingerprint"></i>
+      </div>
+      <form action="/signin" method="POST" class="form_styles" autocomplete="off">
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+          autocomplete="new-user-email"
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+          autocomplete="new-password"
+        />
+        <button type="submit"><i class="fa-solid fa-user-lock"></i>Sign In</button>
+      </form>
+    </div>
+    

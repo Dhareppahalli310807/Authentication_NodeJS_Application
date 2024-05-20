@@ -1,0 +1,53 @@
+<!-- Flash message -->
+<% if (typeof messages !== 'undefined' && messages.length > 0) { %>
+    <div id="notification">
+      <p><i class="fa-solid fa-circle-check"></i></p>
+      <% messages.forEach(function(message) { %>
+      <p><%= message %></p>
+      <% }) %>
+    </div>
+    <% } %>
+    <div id="signin_display" class="default_container">
+      <h1 id="welcome_text">Welcome to the Home Page</h1>
+    
+      <div class="fingerprint_icon">
+        <i class="fa-solid fa-fingerprint"></i>
+      </div>
+      <div id="btn_div">
+        <button onclick="signOut()">
+          <i class="fa-solid fa-right-from-bracket"></i>Sign Out
+        </button>
+        <button onclick="resetPassword()">
+          <i class="fa-solid fa-key"></i>Reset Password
+        </button>
+      </div>
+    </div>
+    
+    <script>
+      function signOut() {
+        // Send sign-out request to the server
+        fetch('/signout', {
+          method: 'POST',
+          credentials: 'same-origin', // Include cookies in the request
+        })
+          .then((response) => {
+            if (response.ok) {
+              // Redirect to sign-in page after successful sign-out
+              window.location.href = '/';
+            } else {
+              console.error('Error signing out');
+              // Handle sign-out error
+            }
+          })
+          .catch((error) => {
+            console.error('Error signing out:', error);
+            // Handle sign-out error
+          });
+      }
+    
+      function resetPassword() {
+        //Redirect to reset password route
+        window.location.href = '/resetpassword';
+      }
+    </script>
+    
